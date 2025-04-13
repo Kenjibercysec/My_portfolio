@@ -27,6 +27,13 @@ export default function Hero() {
     }
   }, [])
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section ref={heroRef} className="relative h-screen flex items-center justify-center overflow-hidden">
       <div
@@ -45,7 +52,7 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              Cybersecurity Specialist
+              Software Engineer & Backend Developer
             </motion.div>
             <motion.h1
               className="text-4xl md:text-6xl font-bold mb-4 text-white"
@@ -81,8 +88,8 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 1 }}
             >
-              <Button className="bg-green-600 hover:bg-green-700 text-black">View Projects</Button>
-              <Button variant="outline" className="border-green-500 text-green-500 hover:bg-green-900/20">
+              <Button className="bg-green-600 hover:bg-green-700 text-black" onClick={() => scrollToSection('projects')}>View Projects</Button>
+              <Button variant="outline" className="border-green-500 text-green-500 hover:bg-green-900/20" onClick={() => scrollToSection('contact')}>
                 Contact Me
               </Button>
             </motion.div>
