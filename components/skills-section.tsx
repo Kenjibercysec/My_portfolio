@@ -107,7 +107,6 @@ export default function SkillsSection() {
               <Progress
                 value={animatedSkills[skill.name] || 0}
                 className="h-2 bg-gray-700"
-                style={{ backgroundColor: "rgb(34, 197, 94)" }}
               />
             </motion.div>
           ))}
