@@ -9,16 +9,14 @@ export default function SkillsSection() {
   const [animatedSkills, setAnimatedSkills] = useState<{ [key: string]: number }>({})
 
   const skills = [
-    { name: "Penetration Testing", icon: Bug, value: 95 },
-    { name: "Network Security", icon: Wifi, value: 90 },
-    { name: "Malware Analysis", icon: FileCode, value: 85 },
-    { name: "Incident Response", icon: AlertTriangle, value: 88 },
-    { name: "Cryptography", icon: Key, value: 80 },
-    { name: "Cloud Security", icon: Server, value: 92 },
-    { name: "Security Architecture", icon: Shield, value: 85 },
-    { name: "Database Security", icon: Database, value: 78 },
-    { name: "Secure Coding", icon: Code, value: 82 },
-    { name: "Access Management", icon: Lock, value: 90 },
+    { name: "Penetration Testing", icon: Bug, value: 36 },
+    { name: "Network Security", icon: Wifi, value: 44 },
+    { name: "Incident Response", icon: AlertTriangle, value: 32 },
+    { name: "Cryptography", icon: Key, value: 40 },
+    { name: "Security Architecture", icon: Shield, value: 41 },
+    { name: "Database Security", icon: Database, value: 34 },
+    { name: "Development", icon: Code, value: 67 },
+    { name: "Access Management", icon: Lock, value: 51 },
   ]
 
   const container = {
@@ -80,8 +78,7 @@ export default function SkillsSection() {
           </h2>
           <div className="w-20 h-1 bg-green-500 mx-auto mb-6"></div>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            My expertise spans across various cybersecurity domains, allowing me to provide comprehensive security
-            solutions.
+            My expertise spans across multiple areas
           </p>
         </motion.div>
 
@@ -126,14 +123,14 @@ export default function SkillsSection() {
           <h3 className="text-xl font-bold text-white mb-6 text-center">Programming Languages</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
-              { name: "C/C++", level: 90 },
-              { name: "Python", level: 85 },
-              { name: "JavaScript", level: 80 },
-              { name: "HTML/CSS", level: 85 },
-              { name: "Bash", level: 75 },
+              { name: "C/C++", level: 81 },
+              { name: "Python", level: 77 },
+              { name: "JavaScript", level: 55 },
+              { name: "HTML/CSS", level: 56 },
+              { name: "Bash", level: 70 },
               { name: "PowerShell", level: 70 },
-              { name: "SQL", level: 75 },
-              { name: "Go", level: 60 },
+              { name: "SQL", level: 77 },
+              { name: "Go", level: 32 },
             ].map((lang, index) => (
               <motion.div
                 key={index}

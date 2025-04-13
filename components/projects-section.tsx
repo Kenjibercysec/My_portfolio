@@ -183,11 +183,11 @@ export default function ProjectsSection() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
-            Security <span className="text-green-500">Projects</span>
+            All my <span className="text-green-500">Projects</span>
           </h2>
           <div className="w-20 h-1 bg-green-500 mx-auto mb-6"></div>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Explore my portfolio of cybersecurity projects, tools, and solutions designed to protect digital assets.
+            Explore my portfolio of cybersecurity and backend projects, tools, and solutions.
           </p>
         </motion.div>
 

@@ -123,7 +123,9 @@ export default function ContactSection() {
                 <h3 className="text-xl font-semibold text-white mb-4">Connect</h3>
                 <div className="flex space-x-4">
                   <motion.a
-                    href="#"
+                    href="https://github.com/Kenjibercysec"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 hover:bg-green-500/20 transition-colors"
                     whileHover={{ scale: 1.2, rotate: 5 }}
                     whileTap={{ scale: 0.9 }}
@@ -131,7 +133,9 @@ export default function ContactSection() {
                     <Github className="w-5 h-5" />
                   </motion.a>
                   <motion.a
-                    href="#"
+                    href="https://www.linkedin.com/in/silas-kenji-81587318a/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 hover:bg-green-500/20 transition-colors"
                     whileHover={{ scale: 1.2, rotate: -5 }}
                     whileTap={{ scale: 0.9 }}
@@ -139,7 +143,9 @@ export default function ContactSection() {
                     <Linkedin className="w-5 h-5" />
                   </motion.a>
                   <motion.a
-                    href="#"
+                    href="https://x.com/Kenji_theDev"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 hover:bg-green-500/20 transition-colors"
                     whileHover={{ scale: 1.2, rotate: 5 }}
                     whileTap={{ scale: 0.9 }}
