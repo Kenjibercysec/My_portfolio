@@ -1,12 +1,25 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Shield, Lock, Code, Server, Database, Wifi, Bug, FileCode, AlertTriangle, Key } from "lucide-react"
-import { Progress } from "@/components/ui/progress"
-import { useState, useEffect } from "react"
+import { motion } from "framer-motion";
+import {
+  Shield,
+  Lock,
+  Code,
+  Server,
+  Database,
+  Wifi,
+  Bug,
+  FileCode,
+  AlertTriangle,
+  Key,
+} from "lucide-react";
+import { Progress } from "@/components/ui/progress";
+import { useState, useEffect } from "react";
 
 export default function SkillsSection() {
-  const [animatedSkills, setAnimatedSkills] = useState<{ [key: string]: number }>({})
+  const [animatedSkills, setAnimatedSkills] = useState<{
+    [key: string]: number;
+  }>({});
 
   const skills = [
     { name: "Penetration Testing", icon: Bug, value: 36 },
@@ -17,7 +30,7 @@ export default function SkillsSection() {
     { name: "Database Security", icon: Database, value: 34 },
     { name: "Development", icon: Code, value: 67 },
     { name: "Access Management", icon: Lock, value: 51 },
-  ]
+  ];
 
   const container = {
     hidden: { opacity: 0 },
@@ -27,12 +40,18 @@ export default function SkillsSection() {
         staggerChildren: 0.1,
       },
     },
-  }
+  };
 
   const item = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0 },
-  }
+  };
+
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -45,23 +64,23 @@ export default function SkillsSection() {
                 setAnimatedSkills((prev) => ({
                   ...prev,
                   [skill.name]: skill.value,
-                }))
-              }, index * 100)
-            })
-          }, 500)
-          return () => clearTimeout(timer)
+                }));
+              }, index * 100);
+            });
+          }, 500);
+          return () => clearTimeout(timer);
         }
       },
-      { threshold: 0.1 },
-    )
+      { threshold: 0.1 }
+    );
 
-    const section = document.getElementById("skills")
-    if (section) observer.observe(section)
+    const section = document.getElementById("skills");
+    if (section) observer.observe(section);
 
     return () => {
-      if (section) observer.unobserve(section)
-    }
-  }, [])
+      if (section) observer.unobserve(section);
+    };
+  }, []);
 
   return (
     <section className="py-20 bg-gray-900 relative z-10" id="skills">
@@ -101,13 +120,15 @@ export default function SkillsSection() {
                 </div>
                 <div>
                   <h3 className="text-lg font-medium text-white">{skill.name}</h3>
-                  <div className="text-green-500 font-mono">{animatedSkills[skill.name] || 0}%</div>
+                  <div className="text-green-500 font-mono">
+                    {animatedSkills[skill.name] || 0}%
+                  </div>
                 </div>
               </div>
               <Progress
                 value={animatedSkills[skill.name] || 0}
                 className="h-2 bg-gray-700"
-                indicatorClassName="bg-green-500"
+                style={{ backgroundColor: "rgb(34, 197, 94)" }}
               />
             </motion.div>
           ))}
@@ -120,7 +141,9 @@ export default function SkillsSection() {
           viewport={{ once: true }}
           className="mt-16"
         >
-          <h3 className="text-xl font-bold text-white mb-6 text-center">Programming Languages</h3>
+          <h3 className="text-xl font-bold text-white mb-6 text-center">
+            Programming Languages
+          </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
               { name: "C/C++", level: 81 },
@@ -160,28 +183,29 @@ export default function SkillsSection() {
 
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {Array.from({ length: 15 }).map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 rounded-full bg-green-500/30"
-            initial={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
-              scale: Math.random() * 0.5 + 0.5,
-            }}
-            animate={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
-              scale: Math.random() * 0.5 + 0.5,
-            }}
-            transition={{
-              duration: 10 + Math.random() * 20,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "linear",
-            }}
-          />
-        ))}
+        {isClient &&
+          Array.from({ length: 15 }).map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 rounded-full bg-green-500/30"
+              initial={{
+                x: Math.random() * (window?.innerWidth || 1),
+                y: Math.random() * (window?.innerHeight || 1),
+                scale: Math.random() * 0.5 + 0.5,
+              }}
+              animate={{
+                x: Math.random() * (window?.innerWidth || 1),
+                y: Math.random() * (window?.innerHeight || 1),
+                scale: Math.random() * 0.5 + 0.5,
+              }}
+              transition={{
+                duration: 10 + Math.random() * 20,
+                repeat: Number.POSITIVE_INFINITY,
+                ease: "linear",
+              }}
+            />
+          ))}
       </div>
     </section>
-  )
+  );
 }

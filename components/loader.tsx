@@ -119,12 +119,12 @@ export default function Loader() {
               key={i}
               className="absolute text-green-500/10 text-xs font-mono"
               initial={{
-                x: Math.random() * window.innerWidth,
+                x: typeof window !== 'undefined' ? Math.random() * window.innerWidth : 0,
                 y: -20,
                 opacity: 0.1 + Math.random() * 0.3,
               }}
               animate={{
-                y: window.innerHeight + 20,
+                y: typeof window !== 'undefined' ? window.innerHeight + 20 : 200, // Provide a fallback value
               }}
               transition={{
                 duration: 10 + Math.random() * 15,
