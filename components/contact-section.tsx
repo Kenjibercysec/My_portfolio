@@ -1,51 +1,14 @@
 "use client"
 
 import type React from "react"
-
-import { useState, useRef } from "react"
 import { motion } from "framer-motion"
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { useToast } from "@/hooks/use-toast"
 
 export default function ContactSection() {
-  const { toast } = useToast()
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const formRef = useRef<HTMLFormElement>(null)
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      })
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      })
-    }, 1500)
-  }
-
+  const email = "silasotsuka@gmail.com"
+  const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=Contact from Portfolio`
+  
   return (
     <section className="py-20 bg-gray-900 relative z-10" id="contact">
       <div className="container mx-auto px-4">
@@ -86,7 +49,14 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-gray-300 font-medium">Email</h4>
-                    <p className="text-green-500">silas.kenji@gmail.com</p>
+                    <a 
+                      href={gmailComposeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-green-500 hover:text-green-400 transition-colors"
+                    >
+                      {email}
+                    </a>
                   </div>
                 </motion.div>
 
@@ -164,94 +134,32 @@ export default function ContactSection() {
             viewport={{ once: true }}
           >
             <div className="bg-gray-800 p-8 rounded-lg border border-green-500/20 hover:shadow-[0_0_15px_rgba(34,197,94,0.15)] transition-all duration-500">
-              <h3 className="text-xl font-semibold text-white mb-6">Send a Message</h3>
+              <h3 className="text-xl font-semibold text-white mb-6">Quick Contact</h3>
+              <p className="text-gray-400 mb-6">
+                Click the button below to send me an email directly through Gmail.
+              </p>
+              
+              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                <a 
+                  href={gmailComposeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-md flex items-center justify-center gap-2 transition-colors"
+                >
+                  <Mail className="w-4 h-4" />
+                  Open Gmail
+                </a>
+              </motion.div>
 
-              <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <motion.div whileHover={{ y: -2 }} transition={{ type: "spring", stiffness: 500 }}>
-                    <Input
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="Your Name"
-                      className="bg-gray-700 border-gray-600 focus-visible:ring-green-500"
-                      required
-                    />
-                  </motion.div>
-                  <motion.div whileHover={{ y: -2 }} transition={{ type: "spring", stiffness: 500 }}>
-                    <Input
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="Your Email"
-                      className="bg-gray-700 border-gray-600 focus-visible:ring-green-500"
-                      required
-                    />
-                  </motion.div>
-                </div>
-
-                <motion.div whileHover={{ y: -2 }} transition={{ type: "spring", stiffness: 500 }}>
-                  <Input
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    placeholder="Subject"
-                    className="bg-gray-700 border-gray-600 focus-visible:ring-green-500"
-                    required
-                  />
-                </motion.div>
-
-                <motion.div whileHover={{ y: -2 }} transition={{ type: "spring", stiffness: 500 }}>
-                  <Textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Your Message"
-                    className="bg-gray-700 border-gray-600 focus-visible:ring-green-500 min-h-[150px]"
-                    required
-                  />
-                </motion.div>
-
-                <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                  <Button
-                    type="submit"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? (
-                      <span className="flex items-center">
-                        <svg
-                          className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                        >
-                          <circle
-                            className="opacity-25"
-                            cx="12"
-                            cy="12"
-                            r="10"
-                            stroke="currentColor"
-                            strokeWidth="4"
-                          ></circle>
-                          <path
-                            className="opacity-75"
-                            fill="currentColor"
-                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                          ></path>
-                        </svg>
-                        Sending...
-                      </span>
-                    ) : (
-                      <span className="flex items-center">
-                        <Send className="w-4 h-4 mr-2" />
-                        Send Message
-                      </span>
-                    )}
-                  </Button>
-                </motion.div>
-              </form>
+              <div className="mt-8 p-6 bg-gray-700/50 rounded-lg border border-green-500/10">
+                <h4 className="text-white font-medium mb-2">Alternative Contact Methods</h4>
+                <ul className="space-y-2 text-gray-400">
+                  <li>• Connect with me on LinkedIn</li>
+                  <li>• Follow me on Twitter</li>
+                  <li>• Check my projects on GitHub</li>
+                  <li>• Or call me directly</li>
+                </ul>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -259,25 +167,32 @@ export default function ContactSection() {
 
       {/* Animated particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {Array.from({ length: 8 }).map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 rounded-full bg-green-500/40"
-            initial={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
-            }}
-            animate={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
-            }}
-            transition={{
-              duration: 15 + Math.random() * 10,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "linear",
-            }}
-          />
-        ))}
+        {Array.from({ length: 8 }).map((_, i) => {
+          const x1 = (i % 4) * 25
+          const x2 = ((i + 2) % 4) * 25
+          const y1 = Math.floor(i / 4) * 50
+          const y2 = (Math.floor(i / 4) + 1) * 50
+
+          return (
+            <motion.div
+              key={i}
+              className="absolute w-1 h-1 rounded-full bg-green-500/40"
+              initial={{
+                x: `${x1}%`,
+                y: `${y1}%`,
+              }}
+              animate={{
+                x: `${x2}%`,
+                y: `${y2}%`,
+              }}
+              transition={{
+                duration: 10 + (i * 2),
+                repeat: Infinity,
+                ease: "linear",
+              }}
+            />
+          )
+        })}
       </div>
     </section>
   )
