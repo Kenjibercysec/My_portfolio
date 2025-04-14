@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { Shield, Lock, Code, Terminal, Cpu, Database } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { TypeAnimation } from "react-type-animation"
+import { VisitorCounter } from "@/components/visitor-counter"
 
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -92,6 +93,14 @@ export default function Hero() {
               <Button variant="outline" className="border-green-500 text-green-500 hover:bg-green-900/20" onClick={() => scrollToSection('contact')}>
                 Contact Me
               </Button>
+            </motion.div>
+            <motion.div
+              className="mt-4 text-sm text-gray-500"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.2 }}
+            >
+              <VisitorCounter />
             </motion.div>
           </motion.div>
 
