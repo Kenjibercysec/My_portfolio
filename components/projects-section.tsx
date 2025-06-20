@@ -138,6 +138,50 @@ export default function ProjectsSection() {
         "RESTful API with Express",
       ],
     },
+    {
+      id: 8,
+      title: "Go Scraper",
+      description: "A Golang Webscraping tool built for studies",
+      image: "/goscrap.png?height+300&width=500",
+      category: "Web",
+      tags: ["Golang"],
+      link: "https://github.com/Kenjibercysec/Webscraping_GO",
+      github: "https://github.com/Kenjibercysec/Webscraping_GO",
+      details: [
+        "Receive a URL as the input",
+        "Obtain the total number of pages and excracts products",
+        "Saves data in CSV or JSON files",
+      ],
+    },
+    {
+      id: 9,
+      title: "Neural network Visualizer",
+      description: "A Anime.js web application to visualize neural networks learning progress",
+      image: "/neural.png?height=300&width=500",
+      category: "Web",
+      tags: ["Typescript", "Node.js", "HTML & CSS"],
+      link: "https://networkvizualizer.vercel.app",
+      github: "https://github.com/Kenjibercysec/networkvizualizer",
+      details: [
+        "Uses the anime.js lib to demonstrate its usage",
+        "Displays a neural network learning progress at a web application",
+      ],
+    },
+    {
+      id: 10,
+      title: "Flashcard creation web tool",
+      description: "A web tool to create flashcards for studying",
+      image: "/flashcards.png?height=300&width=500",
+      category: "Web",
+      tags: ["Typescript", "HTML & CSS"],
+      link: "https://flashcards-lake-zeta.vercel.app",
+      github: "https://github.com/Kenjibercysec/flashcards",
+      details: [
+        "Create as many flashcards as the user wants",
+        "Remove key words from the cards texts so the user can select the corret ones",
+      ],
+    },
+
   ]
 
   const filteredProjects =
