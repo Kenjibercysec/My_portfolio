@@ -19,7 +19,7 @@ export default function Navbar() {
       }
 
       // Update active section based on scroll position
-      const sections = ["home", "about", "skills", "projects", "contact"]
+      const sections = ["home", "about", "skills", "projects", "contact", "writeups"]
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
@@ -46,6 +46,7 @@ export default function Navbar() {
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
+    { name: "Writeups", href: "#writeups" },
   ]
 
   const scrollToSection = (sectionId: string) => {
