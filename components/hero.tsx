@@ -40,7 +40,7 @@ export default function Hero() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(34, 197, 94, 0.15) 0%, rgba(0, 0, 0, 0) 50%)`,
+          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(239, 68, 68, 0.15) 0%, rgba(0, 0, 0, 0) 50%)`,
         }}
       />
 
@@ -48,7 +48,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <motion.div
-              className="inline-block mb-2 px-3 py-1 border border-green-500 rounded-full text-sm"
+              className="inline-block mb-2 px-3 py-1 border border-red-600 rounded-full text-sm"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
@@ -61,7 +61,7 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
             >
-              Silas <span className="text-green-400">Kenji</span>
+              Silas <span className="text-red-500">Kenji</span>
             </motion.h1>
             <motion.div
               className="text-xl mb-6 text-gray-300 h-16"
@@ -89,8 +89,8 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 1 }}
             >
-              <Button className="bg-green-600 hover:bg-green-700 text-black" onClick={() => scrollToSection('projects')}>View Projects</Button>
-              <Button variant="outline" className="border-green-500 text-green-500 hover:bg-green-900/20" onClick={() => scrollToSection('contact')}>
+              <Button className="bg-red-600 hover:bg-red-700 text-black" onClick={() => scrollToSection('projects')}>View Projects</Button>
+              <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-900/20" onClick={() => scrollToSection('contact')}>
                 Contact Me
               </Button>
             </motion.div>
@@ -122,7 +122,7 @@ export default function Hero() {
                   ease: "linear",
                 }}
               >
-                <div className="w-full h-full rounded-full border-4 border-dashed border-green-500/30" />
+                <div className="w-full h-full rounded-full border-4 border-dashed border-red-600/30" />
               </motion.div>
 
               <motion.div
@@ -136,12 +136,12 @@ export default function Hero() {
                   ease: "linear",
                 }}
               >
-                <div className="w-3/4 h-3/4 rounded-full border-4 border-dashed border-green-500/50" />
+                <div className="w-3/4 h-3/4 rounded-full border-4 border-dashed border-red-600/50" />
               </motion.div>
 
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-black/80 p-6 rounded-full border-2 border-green-500">
-                  <Shield className="w-20 h-20 text-green-500" />
+                <div className="bg-black/80 p-6 rounded-full border-2 border-red-600">
+                  <Shield className="w-20 h-20 text-red-600" />
                 </div>
               </div>
 
@@ -157,8 +157,8 @@ export default function Hero() {
                   ease: "easeInOut",
                 }}
               >
-                <div className="bg-black p-3 rounded-full border border-green-500">
-                  <Lock className="w-8 h-8 text-green-400" />
+                <div className="bg-black p-3 rounded-full border border-red-600">
+                  <Lock className="w-8 h-8 text-red-500" />
                 </div>
               </motion.div>
 
@@ -175,8 +175,8 @@ export default function Hero() {
                   delay: 0.5,
                 }}
               >
-                <div className="bg-black p-3 rounded-full border border-green-500">
-                  <Code className="w-8 h-8 text-green-400" />
+                <div className="bg-black p-3 rounded-full border border-red-600">
+                  <Code className="w-8 h-8 text-red-500" />
                 </div>
               </motion.div>
 
@@ -193,8 +193,8 @@ export default function Hero() {
                   delay: 1,
                 }}
               >
-                <div className="bg-black p-3 rounded-full border border-green-500">
-                  <Terminal className="w-8 h-8 text-green-400" />
+                <div className="bg-black p-3 rounded-full border border-red-600">
+                  <Terminal className="w-8 h-8 text-red-500" />
                 </div>
               </motion.div>
 
@@ -211,8 +211,8 @@ export default function Hero() {
                   delay: 1.5,
                 }}
               >
-                <div className="bg-black p-3 rounded-full border border-green-500">
-                  <Cpu className="w-8 h-8 text-green-400" />
+                <div className="bg-black p-3 rounded-full border border-red-600">
+                  <Cpu className="w-8 h-8 text-red-500" />
                 </div>
               </motion.div>
 
@@ -229,8 +229,8 @@ export default function Hero() {
                   delay: 0.8,
                 }}
               >
-                <div className="bg-black p-3 rounded-full border border-green-500">
-                  <Database className="w-8 h-8 text-green-400" />
+                <div className="bg-black p-3 rounded-full border border-red-600">
+                  <Database className="w-8 h-8 text-red-500" />
                 </div>
               </motion.div>
             </div>
@@ -243,7 +243,7 @@ export default function Hero() {
         {Array.from({ length: 10 }).map((_, i) => (
           <motion.div
             key={i}
-            className="absolute text-green-500/20 text-xs font-mono whitespace-nowrap"
+            className="absolute text-red-600/20 text-xs font-mono whitespace-nowrap"
             initial={{
               x: Math.random() * window.innerWidth,
               y: -100,

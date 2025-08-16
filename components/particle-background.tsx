@@ -37,8 +37,8 @@ export default function ParticleBackground() {
 
       getRandomColor() {
         const colors = [
-          "rgba(0, 255, 170, 0.7)", // Green
-          "rgba(0, 170, 255, 0.7)", // Blue
+          "rgba(239, 68, 68, 0.7)", // Red
+          "rgba(220, 38, 38, 0.7)", // Dark Red
           "rgba(255, 255, 255, 0.7)", // White
         ]
         return colors[Math.floor(Math.random() * colors.length)]

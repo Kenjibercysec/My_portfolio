@@ -32,7 +32,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="min-h-screen bg-black text-green-500 relative overflow-hidden"
+            className="min-h-screen bg-black text-red-600 relative overflow-hidden"
           >
             <ParticleBackground />
             <Navbar />
@@ -42,7 +42,7 @@ export default function Home() {
             <ProjectsSection />
             <ContactSection />
 
-            <footer className="py-6 text-center text-sm text-green-500/60 relative z-10">
+            <footer className="py-6 text-center text-sm text-red-600/60 relative z-10">
               <div className="container mx-auto">
                 <p>© {new Date().getFullYear()} Silas Kenji. All rights reserved.</p>
                 <div className="flex items-center justify-center mt-2 gap-2">

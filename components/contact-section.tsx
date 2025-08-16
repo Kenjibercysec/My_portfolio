@@ -20,9 +20,9 @@ export default function ContactSection() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
-            Get In <span className="text-green-500">Touch</span>
+            Get In <span className="text-red-600">Touch</span>
           </h2>
-          <div className="w-20 h-1 bg-green-500 mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-red-600 mx-auto mb-6"></div>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Have a security concern or interested in working together? Feel free to reach out.
           </p>
@@ -35,7 +35,7 @@ export default function ContactSection() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gray-800 p-8 rounded-lg border border-green-500/20 h-full hover:shadow-[0_0_15px_rgba(34,197,94,0.15)] transition-all duration-500">
+            <div className="bg-gray-800 p-8 rounded-lg border border-red-600/20 h-full hover:shadow-[0_0_15px_rgba(239,68,68,0.15)] transition-all duration-500">
               <h3 className="text-xl font-semibold text-white mb-6">Contact Information</h3>
 
               <div className="space-y-6">
@@ -44,8 +44,8 @@ export default function ContactSection() {
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center mr-4">
-                    <Mail className="w-5 h-5 text-green-500" />
+                  <div className="w-10 h-10 rounded-full bg-red-600/10 flex items-center justify-center mr-4">
+                    <Mail className="w-5 h-5 text-red-600" />
                   </div>
                   <div>
                     <h4 className="text-gray-300 font-medium">Email</h4>
@@ -53,7 +53,7 @@ export default function ContactSection() {
                       href={gmailComposeUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-green-500 hover:text-green-400 transition-colors"
+                      className="text-red-600 hover:text-red-500 transition-colors"
                     >
                       {email}
                     </a>
@@ -65,12 +65,12 @@ export default function ContactSection() {
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center mr-4">
-                    <Phone className="w-5 h-5 text-green-500" />
+                  <div className="w-10 h-10 rounded-full bg-red-600/10 flex items-center justify-center mr-4">
+                    <Phone className="w-5 h-5 text-red-600" />
                   </div>
                   <div>
                     <h4 className="text-gray-300 font-medium">Phone</h4>
-                    <p className="text-green-500">+55 (87) 98806-7754</p>
+                    <p className="text-red-600">+55 (87) 98806-7754</p>
                   </div>
                 </motion.div>
 
@@ -79,12 +79,12 @@ export default function ContactSection() {
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center mr-4">
-                    <MapPin className="w-5 h-5 text-green-500" />
+                  <div className="w-10 h-10 rounded-full bg-red-600/10 flex items-center justify-center mr-4">
+                    <MapPin className="w-5 h-5 text-red-600" />
                   </div>
                   <div>
                     <h4 className="text-gray-300 font-medium">Location</h4>
-                    <p className="text-green-500">Petrolina, PE</p>
+                    <p className="text-red-600">Petrolina, PE</p>
                   </div>
                 </motion.div>
               </div>
@@ -96,7 +96,7 @@ export default function ContactSection() {
                     href="https://github.com/Kenjibercysec"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 hover:bg-green-500/20 transition-colors"
+                    className="w-10 h-10 rounded-full bg-red-600/10 flex items-center justify-center text-red-600 hover:bg-red-600/20 transition-colors"
                     whileHover={{ scale: 1.2, rotate: 5 }}
                     whileTap={{ scale: 0.9 }}
                   >
@@ -106,7 +106,7 @@ export default function ContactSection() {
                     href="https://www.linkedin.com/in/silas-kenji-81587318a/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 hover:bg-green-500/20 transition-colors"
+                    className="w-10 h-10 rounded-full bg-red-600/10 flex items-center justify-center text-red-600 hover:bg-red-600/20 transition-colors"
                     whileHover={{ scale: 1.2, rotate: -5 }}
                     whileTap={{ scale: 0.9 }}
                   >
@@ -116,7 +116,7 @@ export default function ContactSection() {
                     href="https://x.com/Kenji_theDev"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 hover:bg-green-500/20 transition-colors"
+                    className="w-10 h-10 rounded-full bg-red-600/10 flex items-center justify-center text-red-600 hover:bg-red-600/20 transition-colors"
                     whileHover={{ scale: 1.2, rotate: 5 }}
                     whileTap={{ scale: 0.9 }}
                   >
@@ -133,7 +133,7 @@ export default function ContactSection() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gray-800 p-8 rounded-lg border border-green-500/20 hover:shadow-[0_0_15px_rgba(34,197,94,0.15)] transition-all duration-500">
+            <div className="bg-gray-800 p-8 rounded-lg border border-red-600/20 hover:shadow-[0_0_15px_rgba(239,68,68,0.15)] transition-all duration-500">
               <h3 className="text-xl font-semibold text-white mb-6">Quick Contact</h3>
               <p className="text-gray-400 mb-6">
                 Click the button below to send me an email directly through Gmail.
@@ -144,14 +144,14 @@ export default function ContactSection() {
                   href={gmailComposeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-md flex items-center justify-center gap-2 transition-colors"
+                  className="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-md flex items-center justify-center gap-2 transition-colors"
                 >
                   <Mail className="w-4 h-4" />
                   Open Gmail
                 </a>
               </motion.div>
 
-              <div className="mt-8 p-6 bg-gray-700/50 rounded-lg border border-green-500/10">
+              <div className="mt-8 p-6 bg-gray-700/50 rounded-lg border border-red-500/10">
                 <h4 className="text-white font-medium mb-2">Alternative Contact Methods</h4>
                 <ul className="space-y-2 text-gray-400">
                   <li>• Connect with me on LinkedIn</li>
@@ -176,7 +176,7 @@ export default function ContactSection() {
           return (
             <motion.div
               key={i}
-              className="absolute w-1 h-1 rounded-full bg-green-500/40"
+              className="absolute w-1 h-1 rounded-full bg-red-500/40"
               initial={{
                 x: `${x1}%`,
                 y: `${y1}%`,

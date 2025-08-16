@@ -96,9 +96,9 @@ export default function TerminalSection() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
-            About <span className="text-green-500">Me</span>
+            About <span className="text-red-600">Me</span>
           </h2>
-          <div className="w-20 h-1 bg-green-500 mx-auto"></div>
+          <div className="w-20 h-1 bg-red-600 mx-auto"></div>
         </motion.div>
 
         <motion.div
@@ -113,13 +113,13 @@ export default function TerminalSection() {
               <motion.div
                 initial={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
-                className={`bg-gray-900 rounded-lg overflow-hidden shadow-xl border border-green-500/30 ${
+                className={`bg-gray-900 rounded-lg overflow-hidden shadow-xl border border-red-600/30 ${
                   terminalMaximized ? "fixed inset-4 z-50" : ""
                 }`}
               >
                 <div className="bg-gray-800 px-4 py-2 flex items-center justify-between">
                   <div className="flex items-center">
-                    <TerminalIcon size={16} className="text-green-500 mr-2" />
+                    <TerminalIcon size={16} className="text-red-600 mr-2" />
                     <span className="text-gray-300 text-sm">silas@security-terminal</span>
                   </div>
                   <div className="flex items-center space-x-2">
@@ -137,15 +137,15 @@ export default function TerminalSection() {
                     </button>
                   </div>
                 </div>
-                <div className="p-4 font-mono text-sm text-green-500 bg-black min-h-[300px] max-h-[500px] overflow-auto">
+                <div className="p-4 font-mono text-sm text-red-600 bg-black min-h-[300px] max-h-[500px] overflow-auto">
                   <div ref={terminalRef} className="terminal-content">
                     {/* Terminal lines will be appended here */}
                   </div>
                   <div className="flex items-center">
-                    <span className="text-green-500">$ </span>
+                    <span className="text-red-600">$ </span>
                     <span className="ml-1">{text}</span>
                     <span
-                      className={`ml-0.5 inline-block w-2 h-4 bg-green-500 ${
+                      className={`ml-0.5 inline-block w-2 h-4 bg-red-600 ${
                         cursorVisible ? "opacity-100" : "opacity-0"
                       }`}
                     ></span>
@@ -159,13 +159,13 @@ export default function TerminalSection() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-gray-900 rounded-lg overflow-hidden shadow-xl border border-green-500/30 p-2 cursor-pointer"
+              className="bg-gray-900 rounded-lg overflow-hidden shadow-xl border border-red-600/30 p-2 cursor-pointer"
               onClick={handleRestore}
             >
               <div className="flex items-center">
-                <TerminalIcon size={16} className="text-green-500 mr-2" />
+                <TerminalIcon size={16} className="text-red-600 mr-2" />
                 <span className="text-gray-300 text-sm">Terminal (minimized)</span>
-                <ChevronRight size={14} className="ml-2 text-green-500" />
+                <ChevronRight size={14} className="ml-2 text-red-600" />
               </div>
             </motion.div>
           )}

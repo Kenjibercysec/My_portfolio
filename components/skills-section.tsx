@@ -225,9 +225,9 @@ export default function SkillsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
-            Technical <span className="text-green-500">Skills</span>
+            Technical <span className="text-red-600">Skills</span>
           </h2>
-          <div className="w-20 h-1 bg-green-500 mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-red-600 mx-auto mb-6"></div>
           <p className="text-gray-400 max-w-2xl mx-auto">
             My expertise spans across multiple areas
           </p>
@@ -241,17 +241,17 @@ export default function SkillsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-gray-800 rounded-lg p-6 border border-green-500/20 hover:border-green-500/50 transition-all duration-300 cursor-pointer group"
+              className="bg-gray-800 rounded-lg p-6 border border-red-600/20 hover:border-red-600/50 transition-all duration-300 cursor-pointer group"
               onClick={() => setSelectedSkill(skill.name)}
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-lg bg-green-500/10 flex items-center justify-center group-hover:bg-green-500/20 transition-all duration-300">
-                  <skill.icon className="w-6 h-6 text-green-500" />
+                <div className="w-12 h-12 rounded-lg bg-red-600/10 flex items-center justify-center group-hover:bg-red-600/20 transition-all duration-300">
+                  <skill.icon className="w-6 h-6 text-red-600" />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-medium text-white">{skill.name}</h3>
                 </div>
-                <ChevronRight className="w-5 h-5 text-green-500 group-hover:translate-x-1 transition-transform duration-300" />
+                <ChevronRight className="w-5 h-5 text-red-600 group-hover:translate-x-1 transition-transform duration-300" />
               </div>
               <p className="text-gray-400 text-sm">{skill.description}</p>
             </motion.div>
@@ -274,12 +274,12 @@ export default function SkillsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="bg-gray-800 rounded-lg p-6 border border-green-500/20 hover:border-green-500/50 transition-all duration-300 cursor-pointer group"
+                className="bg-gray-800 rounded-lg p-6 border border-red-600/20 hover:border-red-600/50 transition-all duration-300 cursor-pointer group"
                 onClick={() => setSelectedSkill(lang.name)}
               >
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-medium text-white">{lang.name}</h3>
-                  <ChevronRight className="w-5 h-5 text-green-500 group-hover:translate-x-1 transition-transform duration-300" />
+                  <ChevronRight className="w-5 h-5 text-red-600 group-hover:translate-x-1 transition-transform duration-300" />
                 </div>
                 <p className="text-gray-400 text-sm">{lang.description}</p>
               </motion.div>
@@ -301,7 +301,7 @@ export default function SkillsSection() {
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
-            className="bg-gray-800 rounded-lg p-6 max-w-lg w-full border border-green-500/20"
+            className="bg-gray-800 rounded-lg p-6 max-w-lg w-full border border-red-600/20"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-between items-center mb-6">
@@ -328,7 +328,7 @@ export default function SkillsSection() {
                   transition={{ delay: index * 0.1 }}
                   className="flex items-center gap-3"
                 >
-                  <div className="w-2 h-2 rounded-full bg-green-500" />
+                  <div className="w-2 h-2 rounded-full bg-red-600" />
                   <p className="text-gray-300">{detail}</p>
                 </motion.div>
               ))}
@@ -342,7 +342,7 @@ export default function SkillsSection() {
         {Array.from({ length: 15 }).map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 rounded-full bg-green-500/30"
+            className="absolute w-2 h-2 rounded-full bg-red-600/30"
             initial={{
               x: typeof window !== 'undefined' ? Math.random() * window.innerWidth : 0,
               y: typeof window !== 'undefined' ? Math.random() * window.innerHeight : 0,

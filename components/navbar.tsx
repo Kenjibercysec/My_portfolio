@@ -73,9 +73,9 @@ export default function Navbar() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 md:h-20">
             <a href="#" className="flex items-center space-x-2">
-              <Shield className="w-8 h-8 text-green-500" />
+              <Shield className="w-8 h-8 text-red-600" />
               <span className="text-xl font-bold text-white">
-                Silas<span className="text-green-500">Kenji</span>
+                Silas<span className="text-red-600">Kenji</span>
               </span>
             </a>
 
@@ -88,15 +88,15 @@ export default function Navbar() {
                     e.preventDefault()
                     scrollToSection(link.href.substring(1))
                   }}
-                  className={`relative text-gray-300 hover:text-green-500 transition-colors ${
-                    activeSection === link.href.substring(1) ? "text-green-500" : ""
+                  className={`relative text-gray-300 hover:text-red-600 transition-colors ${
+                    activeSection === link.href.substring(1) ? "text-red-600" : ""
                   }`}
                 >
                   {link.name}
                   {activeSection === link.href.substring(1) && (
                     <motion.div
                       layoutId="activeSection"
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-green-500"
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-red-600"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.3 }}
@@ -107,7 +107,7 @@ export default function Navbar() {
             </nav>
 
             <div className="hidden md:block">
-              <Button className="bg-green-600 hover:bg-green-700 text-white" onClick={() => scrollToSection("contact")}>
+              <Button className="bg-red-600 hover:bg-red-700 text-white" onClick={() => scrollToSection("contact")}>
                 Get in Touch
               </Button>
             </div>
@@ -135,8 +135,8 @@ export default function Navbar() {
                     key={index}
                     href={link.href}
                     className={`text-xl ${
-                      activeSection === link.href.substring(1) ? "text-green-500" : "text-gray-300"
-                    } hover:text-green-500 transition-colors`}
+                      activeSection === link.href.substring(1) ? "text-red-600" : "text-gray-300"
+                    } hover:text-red-600 transition-colors`}
                     onClick={(e) => {
                       e.preventDefault()
                       scrollToSection(link.href.substring(1))
@@ -146,7 +146,7 @@ export default function Navbar() {
                   </a>
                 ))}
                 <Button
-                  className="bg-green-600 hover:bg-green-700 text-white w-full"
+                  className="bg-red-600 hover:bg-red-700 text-white w-full"
                   onClick={() => scrollToSection("contact")}
                 >
                   Get in Touch

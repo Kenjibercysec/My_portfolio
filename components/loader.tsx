@@ -29,28 +29,28 @@ export default function Loader() {
             transition={{ delay: 0.2 }}
           >
             <h2 className="text-4xl font-bold text-white mb-2">
-              Welcome to my <span className="text-green-500">Portfolio</span>
+              Welcome to my <span className="text-red-600">Portfolio</span>
             </h2>
             <p className="text-gray-400 mb-8">Loading your experience...</p>
           </motion.div>
 
           <div className="w-full max-w-md mx-auto bg-gray-800 rounded-full h-2 mb-8 overflow-hidden">
             <motion.div
-              className="h-full bg-green-500"
+              className="h-full bg-red-600"
               initial={{ width: "0%" }}
               animate={{ width: "100%" }}
               transition={{ duration: 2 }}
             />
           </div>
 
-          <p className="text-green-500/60 text-sm font-mono">Initializing...</p>
+          <p className="text-red-600/60 text-sm font-mono">Initializing...</p>
         </div>
 
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {mounted && Array.from({ length: 50 }).map((_, i) => (
             <motion.div
               key={i}
-              className="absolute text-green-500/10 text-xs font-mono"
+              className="absolute text-red-600/10 text-xs font-mono"
               initial={{
                 x: i % 2 === 0 ? -20 : window.innerWidth + 20,
                 y: (window.innerHeight * i) / 50,

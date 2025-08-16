@@ -21,9 +21,9 @@ export function VisitorCounter() {
   }, []) // Executa apenas uma vez quando o componente é montado
 
   return (
-    <div className="inline-flex items-center gap-2 px-3 py-1 border border-green-500/20 rounded-full bg-black/50 hover:border-green-500/40 transition-colors">
-      <Users size={12} className="text-green-500/60" />
-      <span className="text-green-500/60 text-xs">{count.toLocaleString()} visitors</span>
+    <div className="inline-flex items-center gap-2 px-3 py-1 border border-red-600/20 rounded-full bg-black/50 hover:border-red-600/40 transition-colors">
+      <Users size={12} className="text-red-600/60" />
+      <span className="text-red-600/60 text-xs">{count.toLocaleString()} visitors</span>
     </div>
   )
 } 

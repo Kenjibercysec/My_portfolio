@@ -227,9 +227,9 @@ export default function ProjectsSection() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
-            All my <span className="text-green-500">Projects</span>
+            All my <span className="text-red-600">Projects</span>
           </h2>
-          <div className="w-20 h-1 bg-green-500 mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-red-600 mx-auto mb-6"></div>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Explore my portfolio of cybersecurity and backend projects, tools, and solutions.
           </p>
@@ -246,7 +246,7 @@ export default function ProjectsSection() {
           >
             <button
               onClick={scrollLeft}
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 p-2 rounded-full text-green-500 hover:bg-black/80"
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 p-2 rounded-full text-red-600 hover:bg-black/80"
             >
               <ChevronLeft size={20} />
             </button>
@@ -258,8 +258,8 @@ export default function ProjectsSection() {
                 className={`
                   ${
                     activeCategory === category.id
-                      ? "bg-green-600 hover:bg-green-700 text-white border-green-600"
-                      : "border-green-500/50 text-green-500 hover:bg-green-900/20"
+                      ? "bg-red-600 hover:bg-red-700 text-white border-red-600"
+                      : "border-red-600/50 text-red-600 hover:bg-red-900/20"
                   }
                 `}
                 onClick={() => setActiveCategory(category.id)}
@@ -270,7 +270,7 @@ export default function ProjectsSection() {
 
             <button
               onClick={scrollRight}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 p-2 rounded-full text-green-500 hover:bg-black/80"
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 p-2 rounded-full text-red-600 hover:bg-black/80"
             >
               <ChevronRight size={20} />
             </button>
@@ -295,7 +295,7 @@ export default function ProjectsSection() {
                 whileHover={{ y: -5 }}
                 className="h-full"
               >
-                <Card className="bg-gray-900 border-green-500/20 overflow-hidden h-full flex flex-col hover:border-green-500/50 transition-all duration-300">
+                <Card className="bg-gray-900 border-red-600/20 overflow-hidden h-full flex flex-col hover:border-red-600/50 transition-all duration-300">
                   <div className="relative overflow-hidden group">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
                     <img
@@ -304,7 +304,7 @@ export default function ProjectsSection() {
                       className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute top-2 right-2 z-20">
-                      <Badge variant="outline" className="bg-black/50 border-green-500 text-green-400">
+                      <Badge variant="outline" className="bg-black/50 border-red-600 text-red-500">
                         {project.category}
                       </Badge>
                     </div>
@@ -316,7 +316,7 @@ export default function ProjectsSection() {
                   <CardContent className="flex-grow">
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag, index) => (
-                        <Badge key={index} variant="secondary" className="bg-green-500/10 text-green-400 border-none">
+                        <Badge key={index} variant="secondary" className="bg-red-600/10 text-red-500 border-none">
                           {tag}
                         </Badge>
                       ))}
@@ -327,7 +327,7 @@ export default function ProjectsSection() {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="border-green-500/50 text-green-500 hover:bg-green-900/20"
+                        className="border-red-600/50 text-red-600 hover:bg-red-900/20"
                         onClick={() => handleProjectClick(project.id)}
                       >
                         <Eye className="w-4 h-4 mr-2" />
@@ -396,7 +396,7 @@ export default function ProjectsSection() {
 
                         <div className="flex flex-wrap gap-2 mb-4">
                           {project.tags.map((tag, index) => (
-                            <Badge key={index} className="bg-green-500/10 text-green-400 border-none">
+                            <Badge key={index} className="bg-red-600/10 text-red-500 border-none">
                               {tag}
                             </Badge>
                           ))}
@@ -412,7 +412,7 @@ export default function ProjectsSection() {
 
                       <div className="flex gap-4">
                         <Button
-                          className="bg-green-600 hover:bg-green-700 text-white flex-1"
+                          className="bg-red-600 hover:bg-red-700 text-white flex-1"
                           onClick={() => window.open(project.github, "_blank")}
                         >
                           <Github className="w-4 h-4 mr-2" />
@@ -420,7 +420,7 @@ export default function ProjectsSection() {
                         </Button>
                         <Button
                           variant="outline"
-                          className="border-green-500 text-green-500 hover:bg-green-900/20 flex-1"
+                          className="border-red-600 text-red-600 hover:bg-red-900/20 flex-1"
                           onClick={() => window.open(project.link, "_blank")}
                         >
                           <ExternalLink className="w-4 h-4 mr-2" />
