@@ -8,6 +8,7 @@ import TerminalSection from "@/components/terminal-section"
 import ProjectsSection from "@/components/projects-section"
 import SkillsSection from "@/components/skills-section"
 import ContactSection from "@/components/contact-section"
+import WriteupsSection from "@/components/writeups-section"
 import Navbar from "@/components/navbar"
 import Loader from "@/components/loader"
 import ParticleBackground from "@/components/particle-background"
@@ -40,6 +41,7 @@ export default function Home() {
             <TerminalSection />
             <SkillsSection />
             <ProjectsSection />
+            <WriteupsSection />
             <ContactSection />
 
             <footer className="py-6 text-center text-sm text-red-600/60 relative z-10">
