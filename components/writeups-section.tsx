@@ -112,13 +112,8 @@ const writeups: Writeup[] = [
 ]
 
 const categories = [
-  { id: "all", name: "All Writeups", count: writeups.length },
-  { id: "pwn", name: "Pwn", count: writeups.filter(w => w.category === "Pwn").length },
-  { id: "web", name: "Web", count: writeups.filter(w => w.category === "Web").length },
-  { id: "crypto", name: "Crypto", count: writeups.filter(w => w.category === "Crypto").length },
-  { id: "forensics", name: "Forensics", count: writeups.filter(w => w.category === "Forensics").length },
-  { id: "reverse", name: "Reverse", count: writeups.filter(w => w.category === "Reverse").length },
-  { id: "misc", name: "Misc", count: writeups.filter(w => w.category === "Misc").length }
+  { id: "CTF", name: "CTF", count: writeups.length },
+
 ]
 
 export default function WriteupsSection() {
@@ -311,14 +306,7 @@ export default function WriteupsSection() {
                 <Github className="w-5 h-5 mr-2" />
                 View Repository
               </Button>
-              <Button
-                variant="outline"
-                className="border-red-600 text-red-600 hover:bg-red-900/20"
-                onClick={() => window.open("https://github.com/Kenjibercysec/WriteUps", "_blank")}
-              >
-                <FileText className="w-5 h-5 mr-2" />
-                Repository README
-              </Button>
+
             </div>
           </div>
         </motion.div>
