@@ -24,90 +24,90 @@ interface Writeup {
 }
 
 const writeups: Writeup[] = [
-  {
-    id: "pwn-101",
-    title: "Pwn 101 - Buffer Overflow Basics",
-    description: "Basic buffer overflow exploitation on a simple binary. Covers stack overflow, ret2libc, and basic ROP chains.",
-    category: "Pwn",
-    difficulty: "Easy",
-    platform: "CTFTime",
-    date: "2024-01-15",
-    tags: ["pwn", "buffer-overflow", "rop", "ret2libc"],
-    githubUrl: "https://github.com/silaskenji/ctf-writeups/tree/main/pwn-101",
-    readmeUrl: "https://github.com/silaskenji/ctf-writeups/blob/main/pwn-101/README.md",
-    solved: true,
-    points: 100,
-    rating: 4.5
-  },
-  {
-    id: "web-xss",
-    title: "Web XSS Challenge - DOM Manipulation",
-    description: "Cross-site scripting challenge involving DOM manipulation and filter bypass techniques.",
-    category: "Web",
-    difficulty: "Medium",
+    {
+    id: "HTB-Whiterabbit",
+    title: "WHiterabbit",
+    description: "A interesting, multi-layered challenge that required so much enumeration (I didn’t really enjoy this patrt tbh), and a deep dive into several different technologies. The path to user access was long and required chaining together a series of unique vulnerabilities.",
+    category: "CTF",
+    difficulty: "Insane",
     platform: "HackTheBox",
-    date: "2024-01-20",
-    tags: ["web", "xss", "dom", "filter-bypass"],
-    githubUrl: "https://github.com/silaskenji/ctf-writeups/tree/main/web-xss",
+    date: "2025-08-09",
+    tags: ["web", "linux"],
+    githubUrl: "https://github.com/Kenjibercysec/WriteUps/blob/main/HackTheBox/whiterabbit_htb_writeup.md",
     solved: true,
-    points: 250,
-    rating: 4.8
-  },
-  {
-    id: "crypto-rsa",
-    title: "Crypto RSA - Wiener's Attack",
-    description: "RSA cryptography challenge implementing Wiener's attack on small private exponents.",
-    category: "Crypto",
-    difficulty: "Hard",
-    platform: "CTFTime",
-    date: "2024-02-01",
-    tags: ["crypto", "rsa", "wiener-attack", "number-theory"],
-    githubUrl: "https://github.com/silaskenji/ctf-writeups/tree/main/crypto-rsa",
-    solved: true,
-    points: 400,
+    points: 70,
     rating: 5.0
   },
   {
-    id: "forensics-memory",
-    title: "Forensics - Memory Dump Analysis",
-    description: "Memory forensics challenge involving process analysis, network connections, and hidden data extraction.",
-    category: "Forensics",
+    id: "HTB-Artificial",
+    title: "Artificial",
+    description: "The objective was to exploit vulnerabilities in malicious TensorFlow models to achieve remote code execution (RCE), escalate privileges, and capture the flags.",
+    category: "CTF",
+    difficulty: "Easy",
+    platform: "HackTheBox",
+    date: "2025-08-14",
+    tags: ["web", "linux"],
+    githubUrl: "https://github.com/Kenjibercysec/WriteUps/blob/main/HackTheBox/artificial_writeup.md",
+    readmeUrl: "https://github.com/Kenjibercysec/WriteUps/blob/main/HackTheBox/artificial_writeup.md",
+    solved: true,
+    points: 40,
+    rating: 4.5
+  },
+  {
+    id: "HTB-Editor",
+    title: "Editor",
+    description: "XWiki RCE exploitation and Privilege Escalation via Netdata (CVE-2024-32019)",
+    category: "CTF",
     difficulty: "Medium",
     platform: "HackTheBox",
-    date: "2024-02-10",
-    tags: ["forensics", "memory", "volatility", "process-analysis"],
-    githubUrl: "https://github.com/silaskenji/ctf-writeups/tree/main/forensics-memory",
+    date: "2025-08-10",
+    tags: ["web", "linux"],
+    githubUrl: "https://github.com/Kenjibercysec/WriteUps/tree/main/HackTheBox/editor_htb_writeup.md",
     solved: true,
-    points: 300,
+    points: 50,
+    rating: 4.8
+  },
+  {
+    id: "HTB-Eureka",
+    title: "Eureka",
+    description: "Java Heapdump extraction and exploitation.",
+    category: "CTF",
+    difficulty: "Hard",
+    platform: "HackTheBox",
+    date: "2025-07-27",
+    tags: ["web", "linux"],
+    githubUrl: "https://github.com/Kenjibercysec/WriteUps/blob/main/HackTheBox/eureka_htb_writeup.md",
+    solved: true,
+    points: 60,
+    rating: 5.0
+  },
+  {
+    id: "HTB-Nocturne",
+    title: "Nocturne",
+    description: "php injectiond and CVE-2023-46818 ",
+    category: "CTF",
+    difficulty: "Medium",
+    platform: "HackTheBox",
+    date: "2025-07-25",
+    tags: ["web", "linux"],
+    githubUrl: "https://github.com/Kenjibercysec/WriteUps/blob/main/HackTheBox/nocturne_writeup.md",
+    solved: true,
+    points: 50,
     rating: 4.6
   },
   {
-    id: "rev-crackme",
-    title: "Reverse Engineering - CrackMe Challenge",
-    description: "Reverse engineering challenge analyzing a custom binary and understanding its protection mechanisms.",
-    category: "Reverse",
+    id: "HTB-Outbound",
+    title: "Outbound",
+    description: "Roundcube email service explotation.",
+    category: "CTF",
     difficulty: "Medium",
-    platform: "CTFTime",
-    date: "2024-02-15",
-    tags: ["reverse", "ida", "ghidra", "assembly", "crackme"],
-    githubUrl: "https://github.com/silaskenji/ctf-writeups/tree/main/rev-crackme",
-    solved: true,
-    points: 350,
-    rating: 4.7
-  },
-  {
-    id: "misc-forensics",
-    title: "Misc - Steganography & Forensics",
-    description: "Miscellaneous challenge combining steganography techniques with file forensics analysis.",
-    category: "Misc",
-    difficulty: "Easy",
     platform: "HackTheBox",
-    date: "2024-02-20",
-    tags: ["misc", "steganography", "forensics", "file-analysis"],
-    githubUrl: "https://github.com/silaskenji/ctf-writeups/tree/main/misc-forensics",
+    date: "2025-07-23",
+    tags: ["web", "linux"],
+    githubUrl: "https://github.com/Kenjibercysec/WriteUps/blob/main/HackTheBox/outbound_writeup.md",
     solved: true,
-    points: 150,
-    rating: 4.3
+    points: 50,
+    rating: 4.7
   }
 ]
 
@@ -306,7 +306,7 @@ export default function WriteupsSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 className="bg-red-600 hover:bg-red-700 text-white"
-                onClick={() => window.open("https://github.com/silaskenji/ctf-writeups", "_blank")}
+                onClick={() => window.open("https://github.com/Kenjibercysec/WriteUps", "_blank")}
               >
                 <Github className="w-5 h-5 mr-2" />
                 View Repository
@@ -314,7 +314,7 @@ export default function WriteupsSection() {
               <Button
                 variant="outline"
                 className="border-red-600 text-red-600 hover:bg-red-900/20"
-                onClick={() => window.open("https://github.com/silaskenji/ctf-writeups/blob/main/README.md", "_blank")}
+                onClick={() => window.open("https://github.com/Kenjibercysec/WriteUps", "_blank")}
               >
                 <FileText className="w-5 h-5 mr-2" />
                 Repository README
