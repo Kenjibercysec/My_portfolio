@@ -75,7 +75,7 @@ export default function Navbar() {
             <a href="#" className="flex items-center space-x-2">
               <Shield className="w-8 h-8 text-red-600" />
               <span className="text-xl font-bold text-white">
-                Silas<span className="text-red-600">Kenji</span>
+                Kenji<span className="text-red-600">XsS</span>
               </span>
             </a>
 
