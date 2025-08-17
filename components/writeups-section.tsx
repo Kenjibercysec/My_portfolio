@@ -148,6 +148,7 @@ export default function WriteupsSection() {
       case 'easy': return 'bg-green-500/10 text-green-400 border-green-500/30'
       case 'medium': return 'bg-yellow-500/10 text-yellow-400 border-yellow-500/30'
       case 'hard': return 'bg-red-500/10 text-red-400 border-red-500/30'
+      case 'Insane': return 'bg-purple-500/10 text-purple-400 border-purple-500/30'
       default: return 'bg-gray-500/10 text-gray-400 border-gray-500/30'
     }
   }
@@ -155,7 +156,7 @@ export default function WriteupsSection() {
   const getCategoryColor = (category: string) => {
     const colors = {
       'Pwn': 'bg-red-500/10 text-red-400 border-red-500/30',
-      'Web': 'bg-blue-500/10 text-blue-400 border-blue-500/30',
+      'CTF': 'bg-blue-500/10 text-blue-400 border-blue-500/30',
       'Crypto': 'bg-purple-500/10 text-purple-400 border-purple-500/30',
       'Forensics': 'bg-green-500/10 text-green-400 border-green-500/30',
       'Reverse': 'bg-orange-500/10 text-orange-400 border-orange-500/30',

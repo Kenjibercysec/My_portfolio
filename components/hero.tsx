@@ -53,7 +53,7 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              Software Engineer & Backend Developer
+              Software Engineer & Red Team Jr Analyst
             </motion.div>
             <motion.h1
               className="text-4xl md:text-6xl font-bold mb-4 text-white"
